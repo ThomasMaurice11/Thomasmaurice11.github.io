@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url("istockphoto-1295114854-170667a.jpg");
+        background-size: 100%;
+    }
+
+    #result1,
+    #result2,
+    #result3,
+    #result4,
+    #result5 {
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        color: orange;
+    }
+
+    h2 {
+        color: orange;
+        margin-left: 50px;
+
+
+    }
+
+    .h2_name {
+        color: orange;
+        margin-left: 30px;
+    }
+
+    .img {
+
+
+        margin-top: -3000px;
+        margin-right: -1500px;
+
+        width: 200px;
+        height: 200px;
+
+    }
+</style>
+
+<body>
+    <div>
+
+        <h1> your booked tickets</h1>
+        <br>
+        <h2 class="h2_name">
+            <ul>
+                <li>
+                    cinema name:
+                    <span id="result1">
+                    </span>
+                </li>
+        </h2>
+        <h2>
+
+            <li>
+                date:
+                <span id="result4">
+                </span>
+            </li>
+        </h2>
+
+        <h2>
+
+            <li>
+                time:
+                <span id="result2">
+                </span>
+            </li>
+        </h2>
+        <h2>
+
+            <li>
+                seat type:
+                <span id="result3">
+                </span>
+            </li>
+        </h2>
+        <h2>
+
+            <li>
+                price:<span id="result5"> 90 L.E</span>
+
+            </li>
+        </h2>
+
+        </ul>
+
+    </div>
+
+
+    <script>
+
+        document.getElementById("result1").innerHTML = localStorage.getItem("name");
+        document.getElementById("result4").innerHTML = localStorage.getItem("date");
+        document.getElementById("result2").innerHTML = localStorage.getItem("time");
+        document.getElementById("result3").innerHTML = localStorage.getItem("seat");
+    </script>
+
+
+</body>
+
+</html>

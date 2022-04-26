@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function passval() {
+
+        var cinema_name = document.getElementById("select1").value;
+
+        localStorage.setItem("name", cinema_name);
+        var date_day = document.getElementById("select4").value;
+        localStorage.setItem("date", date_day);
+
+        var cinema_time = document.getElementById("select2").value;
+        localStorage.setItem("time", cinema_time);
+
+
+
+        var seat_type = document.getElementById("select3").value;
+        localStorage.setItem("seat", seat_type);
+
+
+
+        return true;
+    }
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/master.css"> -->
+</head>
+
+<body>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+
+
+        .select {
+            margin-left: 50px;
+            margin-bottom: 20px;
+            background-color: white;
+            color: black;
+            padding: 10px 80px 10px 10px;
+            border: 3px solid;
+            border-radius: 4px;
+            font-size: larger;
+            vertical-align: middle;
+
+        }
+
+        .time_label {
+
+            color: black;
+
+        }
+
+        .location_img {
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+            margin-bottom: -3px;
+        }
+
+        .calender_img {
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+            margin-bottom: -3px;
+        }
+
+        .time_img {
+            height: 30px;
+            width: 40px;
+            margin-left: 8px;
+
+        }
+
+        body {
+            text-transform: capitalize;
+        }
+
+        .submit {
+            background-color: #d40f7d;
+
+            border: 1px solid #d40f7d;
+            color: #fff;
+            padding: 10px 20px;
+            margin-left: 100px;
+            font-family: Arial;
+        }
+    </style>
+    <form action="buyedTickets.html" novalidate target="_blank">
+        <img src="screen.png" title="tickets seats">
+
+        <label for="place"><img class="location_img" src="location.jpg"></label>
+        <select name="place" class="select" id="select1">
+            <option value="0" disabled selected>choose cinema</option>
+
+            <option value="City Centre Alexandria" selected> City Centre Alexandria</option>
+            <option value="City Centre Almaza">City Centre Almaza</option>
+            <option value="Mall of Egypt">Mall of Egypt</option>
+
+        </select>
+        <br>
+
+
+        <label for="date"><img class="calender_img" src="calender.jpg"></label>
+        <select required name="date" class="select" id="select4">
+
+            <option value="please return and choose a date" selected disabled>choose date</option>
+            <option value="today"> today</option>
+            <option value="3 may"> 3 may</option>
+            <option value="4 may">4 may</option>
+            <option value="5 may">5 may</option>
+
+
+        </select>
+
+        <br>
+        <label for="time" class="time_label"><img class="time_img" src="clock.jpg"> </label>
+        <select name="time" class="select" id="select2">
+            <option value="please return and choose a time" disabled selected>choose time</option>
+
+            <option value="12:00"> 12:00pm</option>
+            <option value="03:00">03:00pm</option>
+            <option value="06:00">06:00pm</option>
+        </select>
+        <br>
+        <label for="Ticket type" style="margin-left: 47px;"></label>
+        <select name="Ticket type" class="select" id="select3">
+            <option value="please return and choose a seat" disabled selected>choose seat</option>
+
+
+            <option value="Standard"> Standard</option>
+            <option value="premium">premium</option>
+
+        </select>
+        <br>
+        <input type="submit" value="confrim seats" class="submit" onclick=" passval() ">
+
+
+    </form>
+
+</body>
+
+</html>
