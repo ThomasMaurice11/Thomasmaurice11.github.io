@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <script>
+    // function myfunction() {
+
+    //     var x1 = document.getElementById("select4").value;
+    //     if (x1.value == "") {
+    //         alert("please choose date");
+    //     }
+
+
+
+
+    // }
     function passval() {
 
         var cinema_name = document.getElementById("select1").value;
@@ -95,7 +106,7 @@
             font-family: Arial;
         }
     </style>
-    <form action="buyedTickets.html" novalidate target="_blank">
+    <form action="buyedTickets.html" target="_blank">
         <img src="screen.png" title="tickets seats">
 
         <label for="place"><img class="location_img" src="location.jpg"></label>
@@ -113,7 +124,7 @@
         <label for="date"><img class="calender_img" src="calender.jpg"></label>
         <select required name="date" class="select" id="select4">
 
-            <option value="please return and choose a date" selected disabled>choose date</option>
+            <option value="" selected disabled>choose date</option>
             <option value="today"> today</option>
             <option value="3 may"> 3 may</option>
             <option value="4 may">4 may</option>
@@ -124,8 +135,8 @@
 
         <br>
         <label for="time" class="time_label"><img class="time_img" src="clock.jpg"> </label>
-        <select name="time" class="select" id="select2">
-            <option value="please return and choose a time" disabled selected>choose time</option>
+        <select required name="time" class="select" id="select2">
+            <option value="" selected disabled>choose time</option>
 
             <option value="12:00"> 12:00pm</option>
             <option value="03:00">03:00pm</option>
@@ -133,8 +144,8 @@
         </select>
         <br>
         <label for="Ticket type" style="margin-left: 47px;"></label>
-        <select name="Ticket type" class="select" id="select3">
-            <option value="please return and choose a seat" disabled selected>choose seat</option>
+        <select required name="Ticket type" class="select" id="select3">
+            <option value="" disabled selected>choose seat</option>
 
 
             <option value="Standard"> Standard</option>
