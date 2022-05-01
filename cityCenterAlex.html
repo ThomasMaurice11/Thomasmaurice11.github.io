@@ -28,6 +28,9 @@
         var seat_type = document.getElementById("select3").value;
         localStorage.setItem("seat", seat_type);
 
+        var film_name = document.getElementById("select5").value;
+        localStorage.setItem("filmname", film_name);
+
 
 
         return true;
@@ -50,7 +53,18 @@
             text-align: center;
         }
 
+        .select_film {
+            margin-left: 92px;
+            margin-bottom: 20px;
+            background-color: white;
+            color: black;
+            padding: 10px 30px 10px 30px;
+            border: 3px solid;
+            border-radius: 4px;
+            font-size: larger;
+            vertical-align: middle;
 
+        }
 
         .select {
             margin-left: 50px;
@@ -158,8 +172,23 @@
             <option value="premium">premium</option>
 
         </select>
+
+
         <br>
-        <input type="submit" value="confrim seats" class="submit" onclick=" passval() ">
+        <label></label>
+        <select required name="film name" class="select_film" id="select5">
+            <option value="" disabled selected>choose film</option>
+
+
+            <option value="the crime"> the crime</option>
+            <option value="al kamen">al kamen</option>
+            <option value="batman">batman</option>
+            <option value="undisputed redemption 3">undisputed redemption 3</option>
+            <option value="john wick 3">john wick 3</option>
+
+        </select>
+        <br>
+        <input type="submit" value="confirm seats" class="submit" onclick=" passval() ">
 
 
     </form>

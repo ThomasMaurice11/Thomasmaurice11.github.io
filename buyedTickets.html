@@ -17,7 +17,8 @@
     #result2,
     #result3,
     #result4,
-    #result5 {
+    #result5,
+    #result6 {
         color: white;
     }
 
@@ -67,47 +68,62 @@
         <h1> your booked tickets</h1>
         <br>
         <h2 class="h2_name">
-            <ul>
+            <h2>
+
                 <li>
-                    cinema name:
-                    <span id="result1">
+                    film name: <span id="result6"></span>
+
+                </li>
+            </h2>
+            <h2>
+
+                <li>
+                    price:<span id="result5"> 90 L.E</span>
+
+                </li>
+            </h2>
+            <h2>
+                <ul>
+                    <li>
+                        cinema name:
+                        <span id="result1">
+                        </span>
+                    </li>
+            </h2>
+            <h2>
+
+                <li>
+                    date:
+                    <span id="result4">
                     </span>
                 </li>
-        </h2>
-        <h2>
+            </h2>
 
-            <li>
-                date:
-                <span id="result4">
-                </span>
-            </li>
-        </h2>
+            <h2>
 
-        <h2>
+                <li>
+                    time:
+                    <span id="result2">
+                    </span>
+                </li>
+            </h2>
+            <h2>
 
-            <li>
-                time:
-                <span id="result2">
-                </span>
-            </li>
-        </h2>
-        <h2>
+                <li>
+                    seat type:
+                    <span id="result3">
+                    </span>
+                </li>
+            </h2>
+            <h2>
 
-            <li>
-                seat type:
-                <span id="result3">
-                </span>
-            </li>
-        </h2>
-        <h2>
+                <li>
+                    price:<span id="result5"> 90 L.E</span>
 
-            <li>
-                price:<span id="result5"> 90 L.E</span>
+                </li>
+            </h2>
 
-            </li>
-        </h2>
-
-        </ul>
+            </ul>
 
 
     </div>
@@ -125,6 +141,7 @@
 
     <script>
 
+        document.getElementById("result6").innerHTML = localStorage.getItem("filmname");
         document.getElementById("result1").innerHTML = localStorage.getItem("name");
         document.getElementById("result4").innerHTML = localStorage.getItem("date");
         document.getElementById("result2").innerHTML = localStorage.getItem("time");
